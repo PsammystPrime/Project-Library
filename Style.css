@@ -1,0 +1,7 @@
+ul{
+    list-style-type: decimal;
+    text-decoration-style: dashed;
+}
+li{
+    text-decoration-style: dotted;
+}
