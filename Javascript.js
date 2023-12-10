@@ -58,6 +58,7 @@ function Book(title, author, pages, status,) {
            e.preventDefault()
          const list1 =document.createElement('li')
           const info = document.createElement('span')
+          const check = document.createElement('span')
           const del = document.createElement('button')
 
           info.textContent= title.value+' by '+author.value+ ' has '+pages.value+ ' pages.'          
@@ -67,6 +68,7 @@ function Book(title, author, pages, status,) {
            })
 
           list1.appendChild(info),
+          list1.appendChild(check)
           list1.appendChild(del),
           bookList.appendChild(list1);
             console.log('author.value')
