@@ -46,16 +46,17 @@ function Book(title, author, pages, status,) {
 
     });*/
 
-        const submit = document.querySelector('.submit');
+        
         const title = document.querySelector('#title');
         const author = document.getElementById('author');
         const pages = document.getElementById('pages');
         const status = document.getElementById('status');
         const bookList = document.querySelector('.list');
-        
+        const submit = document.querySelector('.submit');
+        const clear = document.querySelector('.clear')
 
-        submit.addEventListener('click', function(){
-          
+        submit.addEventListener('click', function(e){
+          e.preventDefault()
           if (title.value,author.value,pages.value!==''  ) {
          const list1 =document.createElement('li')
           const info = document.createElement('span')
@@ -79,9 +80,12 @@ function Book(title, author, pages, status,) {
           bookList.appendChild(list1);
             console.log('author.value')
           }
-
-
           
+        });
+        clear.addEventListener('click', ()=>{
+          title.value = '',
+          author.value = '',
+          pages.value = ''; 
         });
        
 
