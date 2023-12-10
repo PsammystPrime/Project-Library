@@ -56,6 +56,7 @@ function Book(title, author, pages, status,) {
 
         submit.addEventListener('click', function(e){
            e.preventDefault()
+          if (title.value,author.value,pages.value!==''  ) {
          const list1 =document.createElement('li')
           const info = document.createElement('span')
           const check = document.createElement('span')
@@ -77,7 +78,7 @@ function Book(title, author, pages, status,) {
           list1.appendChild(del),
           bookList.appendChild(list1);
             console.log('author.value')
-          
+          }
 
 
           
