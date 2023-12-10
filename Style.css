@@ -8,3 +8,9 @@ li{
 html{
     background-color:  rgb(92, 92, 224);
 }
+form{
+    background-color: aquamarine;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
