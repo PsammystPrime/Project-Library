@@ -11,25 +11,7 @@ function Book(title, author, pages, status,) {
       return this.title +' by '+this.author+ ' has '+this.pages+ ' pages, '+this.status
     };
 
-    function addBookToLibrary() {
-    push.addEventListener('click', ()=>{
-        const listNovel=document.createElement('li')
-        const novel = document.createElement('span')
-        const del = document.createElement('button')
-        novel.textContent = para.textContent
-        del.textContent='delete'
-
-        listNovel.appendChild(novel);
-        listNovel.appendChild(del);
-        lists.appendChild(listNovel);
-        
-        del.addEventListener('click',()=>{
-            lists.removeChild(listNovel)
-        })
-
-    });
-
-        
+    function addBookToLibrary() {  
         const title = document.querySelector('#title');
         const author = document.getElementById('author');
         const pages = document.getElementById('pages');
