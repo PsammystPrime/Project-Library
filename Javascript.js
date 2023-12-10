@@ -34,7 +34,7 @@ function Book(title, author, pages, status,) {
         const novel = document.createElement('span')
         const del = document.createElement('button')
         novel.textContent = para.textContent
-        del.textContent='Delete'
+        del.textContent='delete'
 
         listNovel.appendChild(novel);
         listNovel.appendChild(del);
@@ -43,14 +43,40 @@ function Book(title, author, pages, status,) {
         del.addEventListener('click',()=>{
             lists.removeChild(listNovel)
         })
+
+    });
+
+        const submit = document.querySelector('.submit');
+        const title = document.querySelector('#title');
+        const author = document.getElementById('author');
+        const pages = document.getElementById('pages');
+        const status = document.getElementById('status');
+        const bookList = document.querySelector('.list');
+        
+
+        submit.addEventListener('click', function(e){
+           e.preventDefault()
+         const list1 =document.createElement('li')
+          const info = document.createElement('span')
+          const del = document.createElement('button')
+
+          info.textContent= title.value+' by '+author.value+ ' has '+pages.value+ ' pages.'          
+            del.textContent = 'delete'
+           del.addEventListener('click', ()=>{
+             bookList.removeChild(list1)
+           })
+
+          list1.appendChild(info),
+          list1.appendChild(del),
+          bookList.appendChild(list1);
+            console.log('author.value')
+          
+
+
+          
+        });
        
 
-        const submit = document.querySelector('.submit')
-        const form = document.querySelector('input')
-        submit.addEventListener('click', ()=>{
-            console.log(form.value)
-        })
-    })
       }
       addBookToLibrary()
 
