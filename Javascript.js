@@ -62,6 +62,11 @@ function Book(title, author, pages, status,) {
           const del = document.createElement('button')
 
           info.textContent= title.value+' by '+author.value+ ' has '+pages.value+ ' pages.'          
+            if (status.checked) {
+              check.textContent= 'Read'
+            } else {
+              check.textContent = 'Unread'
+            };
             del.textContent = 'delete'
            del.addEventListener('click', ()=>{
              bookList.removeChild(list1)
