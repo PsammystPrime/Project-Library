@@ -12,7 +12,7 @@ function Book(title, author, pages, status,) {
     };
 
     function addBookToLibrary() {
-    const button = document.querySelector('.btn');
+    /*const button = document.querySelector('.btn');
     const para = document.querySelector('p')  
     const push = document.querySelector('.push')
     const lists = document.querySelector('ul')
@@ -23,13 +23,13 @@ function Book(title, author, pages, status,) {
       let pages = prompt('Pages?')
       let status = prompt('status?')*/
 
-      myLibrary.push(title, /*author, pages, status*/)
-      console.log(myLibrary)
-       para.textContent= title +' by '/*+author+ ' has '+pages+ ' pages, '+status*/
+     //myLibrary.push(title, /*author, pages, status*/)
+     // console.log(myLibrary)
+      // para.textContent= title +' by '/*+author+ ' has '+pages+ ' pages, '+status*/
     
-    })
+    //})
 
-    push.addEventListener('click', ()=>{
+    /*push.addEventListener('click', ()=>{
         const listNovel=document.createElement('li')
         const novel = document.createElement('span')
         const del = document.createElement('button')
@@ -44,7 +44,7 @@ function Book(title, author, pages, status,) {
             lists.removeChild(listNovel)
         })
 
-    });
+    });*/
 
         const submit = document.querySelector('.submit');
         const title = document.querySelector('#title');
@@ -54,8 +54,8 @@ function Book(title, author, pages, status,) {
         const bookList = document.querySelector('.list');
         
 
-        submit.addEventListener('click', function(e){
-           e.preventDefault()
+        submit.addEventListener('click', function(){
+          
           if (title.value,author.value,pages.value!==''  ) {
          const list1 =document.createElement('li')
           const info = document.createElement('span')
