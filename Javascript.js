@@ -12,24 +12,7 @@ function Book(title, author, pages, status,) {
     };
 
     function addBookToLibrary() {
-    /*const button = document.querySelector('.btn');
-    const para = document.querySelector('p')  
-    const push = document.querySelector('.push')
-    const lists = document.querySelector('ul')
-
-     button.addEventListener('click', function(){
-      let title=  prompt('Title')
-     /*let author= prompt('Author')  
-      let pages = prompt('Pages?')
-      let status = prompt('status?')*/
-
-     //myLibrary.push(title, /*author, pages, status*/)
-     // console.log(myLibrary)
-      // para.textContent= title +' by '/*+author+ ' has '+pages+ ' pages, '+status*/
-    
-    //})
-
-    /*push.addEventListener('click', ()=>{
+    push.addEventListener('click', ()=>{
         const listNovel=document.createElement('li')
         const novel = document.createElement('span')
         const del = document.createElement('button')
@@ -44,7 +27,7 @@ function Book(title, author, pages, status,) {
             lists.removeChild(listNovel)
         })
 
-    });*/
+    });
 
         
         const title = document.querySelector('#title');
