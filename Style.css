@@ -3,13 +3,16 @@ html{
 }
 ul{
     list-style-type: decimal;
-    text-decoration-style: dashed;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    justify-content: space-evenly;
 }
 li{
     text-decoration-style: dotted;
     background-color: black;
     color: aqua;
-    
     width: 200px;
     margin-bottom: 10px;
     display: grid;
@@ -23,6 +26,9 @@ h1,h3{
     font-style: oblique;
     font-family: sans-serif;
 }
+li>button:hover{
+    background-color: red;
+}
 .container{
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
@@ -31,10 +37,16 @@ h1,h3{
 form{
     display: grid;
     gap: 5px;
-    
+
 }
 .clear{
     margin-top: 10px;
+}
+.clear:hover{
+    background-color: blueviolet;
+}
+.submit:hover{
+    background-color: green;
 }
 
 .addBooks{
