@@ -48,7 +48,9 @@ form{
 .submit:hover{
     background-color: green;
 }
-
+#notification{
+    color: rgb(4, 124, 14);
+}
 .addBooks{
  background-color: burlywood;
 padding: 5px;
