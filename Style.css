@@ -14,24 +14,32 @@ li{
     margin-bottom: 10px;
     display: grid;
 }
-h3{
+h1,h3{
     display: grid;
- 
+    text-decoration: underline;
     justify-content: center;
+    font-weight: 900;
+    font-size: xx-large;
+    font-style: oblique;
+    font-family: sans-serif;
 }
 .container{
-    background-color: green;
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
-      height: 500px;
+    height: 500px;
 }
 form{
-   height: min-content;
+    display: grid;
+    gap: 5px;
     
 }
-.addBooks{
- background-color: aquamarine;
+.clear{
+    margin-top: 10px;
+}
 
+.addBooks{
+ background-color: burlywood;
+padding: 5px;
 
 }
 .myBooks{
@@ -41,8 +49,6 @@ background-color: blanchedalmond;
 
 }
 .searchBooks{
-    display: rid;
-    grid-column: ;
-    grid-auto-flow: ;
-background-color: red;
+padding: 5px;
+background-color: burlywood;
 }
