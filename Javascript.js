@@ -24,7 +24,7 @@ function Book(title, author, pages, status,) {
         submit.addEventListener('click', function(e){
           e.preventDefault()
           if (title.value,author.value,pages.value!==''  ) {
-            notification.textContent = 'Book added Successfully'
+            notification.textContent = 'Book added Successfully!'
          const list1 =document.createElement('li')
           const info = document.createElement('span')
           const check = document.createElement('span')
@@ -39,6 +39,7 @@ function Book(title, author, pages, status,) {
             del.textContent = 'delete'
            del.addEventListener('click', ()=>{
              bookList.removeChild(list1)
+             notification.textContent = 'Book removed Successfully!'
            })
 
           list1.appendChild(info),
@@ -53,6 +54,7 @@ function Book(title, author, pages, status,) {
           title.value = '',
           author.value = '',
           pages.value = ''; 
+          notification.textContent = 'Log cleared Successfully!'
         });
        
 
