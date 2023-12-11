@@ -19,10 +19,12 @@ function Book(title, author, pages, status,) {
         const bookList = document.querySelector('.list');
         const submit = document.querySelector('.submit');
         const clear = document.querySelector('.clear')
+        const notification = document.getElementById('notification')
 
         submit.addEventListener('click', function(e){
           e.preventDefault()
           if (title.value,author.value,pages.value!==''  ) {
+            notification.textContent = 'Book added Successfully'
          const list1 =document.createElement('li')
           const info = document.createElement('span')
           const check = document.createElement('span')
