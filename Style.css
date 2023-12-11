@@ -1,16 +1,48 @@
+html{
+        background-color:  rgb(92, 92, 224);
+}
 ul{
     list-style-type: decimal;
     text-decoration-style: dashed;
 }
 li{
     text-decoration-style: dotted;
+    background-color: black;
+    color: aqua;
+    
+    width: 200px;
+    margin-bottom: 10px;
+    display: grid;
 }
-html{
-    background-color:  rgb(92, 92, 224);
+h3{
+    display: grid;
+ 
+    justify-content: center;
+}
+.container{
+    background-color: green;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+      height: 500px;
 }
 form{
-    background-color: aquamarine;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
+   height: min-content;
+    
+}
+.addBooks{
+ background-color: aquamarine;
+
+
+}
+.myBooks{
+display: flex;
+flex-direction: column;
+background-color: blanchedalmond;
+
+}
+.searchBooks{
+    display: rid;
+    grid-column: ;
+    grid-auto-flow: ;
+background-color: red;
 }
