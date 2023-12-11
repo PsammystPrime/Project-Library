@@ -10,8 +10,9 @@
 <body>
 
     <h1>The Grand library</h1>
-    
-    <form action="" method="get">
+ <div class="container">
+    <div class="addBooks">
+      <form action="" method="get">
         <label for="Books">Books</label>
         <input type="text" id="title" placeholder="Title" required>
         <label for="author">Author</label>
@@ -21,9 +22,22 @@
         <label for="status">Read</label>
         <input type="checkbox" id="status">                
         <button class="submit">Submit</button>
-    </form>
-    <button class="clear">Clear</button>
-    <ul class="list"></ul>
+      </form>
+      <button class="clear">Clear</button>
+    </div>
+    
+    <div class="myBooks">
+        <h3>My Books</h3>
+        <ul class="list"></ul>
+    </div>
+
+    <div class="searchBooks">
+        <input type="text" id="search"  placeholder="Enter Book">
+        <button class="search-btn">Search</button>
+    </div>
+
+ </div>
+    
 
 
 </body>
