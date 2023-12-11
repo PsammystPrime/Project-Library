@@ -1,12 +1,12 @@
 const myLibrary = [];
-//create constructor for Book
+
 function Book(title, author, pages, status,) {
     this.title = title,
     this.author = author,
     this.pages = pages,
     this.status = status
   };
-  //create method for calling constructor
+
     Book.prototype.info = function () {
       return this.title +' by '+this.author+ ' has '+this.pages+ ' pages, '+this.status
     };
@@ -20,12 +20,15 @@ function Book(title, author, pages, status,) {
         const submit = document.querySelector('.submit');
         const clear = document.querySelector('.clear')
         const notification = document.getElementById('notification')
-
+        
         submit.addEventListener('click', function(e){
           e.preventDefault()
           if (title.value,author.value,pages.value!==''  ) {
-            notification.textContent = 'Book added Successfully!'
-         const list1 =document.createElement('li')
+            novel=new Book(title.value,author.value,pages.value)
+            myLibrary.push(novel)
+
+          notification.textContent = 'Book added Successfully!'
+          const list1 =document.createElement('li')
           const info = document.createElement('span')
           const check = document.createElement('span')
           const del = document.createElement('button')
@@ -46,7 +49,6 @@ function Book(title, author, pages, status,) {
           list1.appendChild(check)
           list1.appendChild(del),
           bookList.appendChild(list1);
-            console.log('author.value')
           }
           
         });
