@@ -66,3 +66,7 @@ background-color: blanchedalmond;
 padding: 5px;
 background-color: burlywood;
 }
+.disclaimer{
+    color: rgb(124, 63, 63);
+    text-decoration-style: wavy;
+}
