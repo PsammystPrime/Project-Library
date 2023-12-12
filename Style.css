@@ -39,12 +39,6 @@ form{
     gap: 5px;
 
 }
-.clear{
-    margin-top: 10px;
-}
-.clear:hover{
-    background-color: blueviolet;
-}
 .submit:hover{
     background-color: green;
 }
