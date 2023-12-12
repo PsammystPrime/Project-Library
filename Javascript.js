@@ -22,7 +22,7 @@ function Book(title, author, pages, status,) {
         
         submit.addEventListener('click', function(e){
           e.preventDefault()
-          if (title.value,author.value,pages.value!==''  ) {
+          if (title.value && author.value && pages.value!==''  ) {
             novel=new Book(title.value,author.value,pages.value)
             myLibrary.push(novel)
 
@@ -48,14 +48,17 @@ function Book(title, author, pages, status,) {
           list1.appendChild(check)
           list1.appendChild(del),
           bookList.appendChild(list1);
-          }else {
-            notification.textContent = 'Input cannot be blank!'
-          }
 
           title.value = '',
           author.value = '',
           pages.value = ''; 
           
+
+          }else {
+            notification.textContent = 'Input cannot be blank!'
+          }
+
+
         });       
 
       }
