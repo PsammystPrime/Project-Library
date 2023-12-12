@@ -18,7 +18,6 @@ function Book(title, author, pages, status,) {
         const status = document.getElementById('status');
         const bookList = document.querySelector('.list');
         const submit = document.querySelector('.submit');
-        const clear = document.querySelector('.clear')
         const notification = document.getElementById('notification')
         
         submit.addEventListener('click', function(e){
@@ -49,16 +48,15 @@ function Book(title, author, pages, status,) {
           list1.appendChild(check)
           list1.appendChild(del),
           bookList.appendChild(list1);
+          }else {
+            notification.textContent = 'Input cannot be blank!'
           }
-          
-        });
-        clear.addEventListener('click', ()=>{
+
           title.value = '',
           author.value = '',
           pages.value = ''; 
-          notification.textContent = 'Log cleared Successfully!'
-        });
-       
+          
+        });       
 
       }
       addBookToLibrary()
