@@ -1,4 +1,4 @@
-html{
+body{
         background-color:  rgb(92, 92, 224);
 }
 ul{
@@ -6,7 +6,6 @@ ul{
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-
     justify-content: space-evenly;
 }
 li{
@@ -63,4 +62,7 @@ background-color: burlywood;
 .disclaimer{
     color: rgb(124, 63, 63);
     text-decoration-style: wavy;
+}
+.hide{
+    display: none;
 }
