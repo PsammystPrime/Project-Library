@@ -34,14 +34,15 @@ function addBookToLibrary(){
          library.push(book1)
          //display book        
         return  library.forEach((book)=>{
+            
             const bookItem =document.createElement('li');
             const bookInfo =document.createElement('p');
             const bookPages =document.createElement('p');
             const bookStatus =document.createElement('p');
             const del = document.createElement('button');
             bookInfo.textContent = 'About: ' + book.info();
-            bookPages.textContent = 'Pages: ' + pages.value;
-            bookStatus.textContent = 'Status: ' + status.value;
+            bookPages.textContent = 'Pages: ' + book.pages;
+            bookStatus.textContent = 'Status: ' + book.status;
             del.textContent = 'Delete';
 
             bookItem.appendChild(bookInfo);
@@ -49,12 +50,17 @@ function addBookToLibrary(){
             bookItem.appendChild(bookStatus);
             bookItem.appendChild(del);
 
-           return bookList.appendChild(bookItem),
+           bookList.appendChild(bookItem),
         
         notification.textContent = 'Book added Successfully!',
+        console.log(library),
+        title.value = '',
+        author.value = '',
+        pages.value = '',
         del.addEventListener('click', ()=>{
             bookList.removeChild(bookItem),
-            library.pop(bookItem),
+            library.slice(0,0),
+            console.log(library),
             notification.textContent = 'Book removed Successfully!'
           })
         });
