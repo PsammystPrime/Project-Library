@@ -1,26 +1,36 @@
+const library = [];
+
 function Book(title, author, pages, status) {
     this.title = title;
     this.author = author;
     this.pages = pages;
     this.status = status;
     this.info = function () {
-      return console.log(this.title+' by '+this.author+' with '+this.pages+' pages ')
+      return this.title+' by '+this.author+' with '+this.pages+' pages '
     }
-  }
+  };
+
+function addBookToLibrary(){
 //   create books
   const book1 = new Book('The 100', 'Kass Morgan','100', 'read')
   const book2 = new Book('The 100', 'Kass Morgan','200', 'read')
   const book3 = new Book('The 200', 'Kent Morgan','300', 'unread')
 
 //Push the books to array
-const library = [];
-library.push(book1)
-library.push(book2)
-library.push(book3)
-console.log(library);
+    library.push(book1)
+    library.push(book2)
+    library.push(book3)
+    console.log(library);
 
 // display the books info
-library.forEach((book)=>{ console.log(book.info());})
+  return  library.forEach((book)=>{ console.log(book.info());})
+}
+
+addBookToLibrary()
+
+
+
+
 
 //Pseudocode
 //1-Take user input of book
