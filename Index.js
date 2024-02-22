@@ -23,6 +23,11 @@ function addBookToLibrary(){
         e.preventDefault()
         bookList.textContent = ''
 
+        if(status.checked == true){
+            status.value = 'Read'
+        } else{
+            status.value = 'Unread'
+        }
         //   create books
          const book1 = new Book(title.value, author.value,pages.value, status.value)
         //Push the books to array
