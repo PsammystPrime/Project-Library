@@ -18,11 +18,11 @@ Made possible using Object Construtors and CRUD Principles.
 3:Create a function for adding and removing the books.  
 * The function should include mechanism for; 
 1. Creating a new book using the 'new' keyword.
- * This info is gotten from the user using a modal or form.
-2. Pushing the book to the library array.
+   * This info is gotten from the user using a modal or form.
+3. Pushing the book to the library array.
    * This requires you to be familiar with array methods.
   3. Displaying the book for the user.
    * This requires your knowledge looping through arrays and DOM manipulation. 
-4. Removing the books from the screen and array at large.  
+5. Removing the books from the screen and array at large.  
 ###
 ##### Have a smooth Library Experience ❤️.
