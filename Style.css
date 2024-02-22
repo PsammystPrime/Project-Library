@@ -1,21 +1,27 @@
-html{
+body{
         background-color:  rgb(92, 92, 224);
+  
 }
 ul{
-    list-style-type: decimal;
+    list-style-type: none;
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
-
+    padding: 0;
     justify-content: space-evenly;
 }
 li{
     text-decoration-style: dotted;
     background-color: black;
-    color: aqua;
+    color: rgb(233, 240, 240);
     width: 200px;
+    height: 225px;
     margin-bottom: 10px;
     display: grid;
+    overflow: hidden;
+}
+li>p{
+    width: 200px;
+    padding-left: 5px;
 }
 h1,h3{
     display: grid;
@@ -33,11 +39,11 @@ li>button:hover{
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
     height: 550px;
+
 }
 form{
     display: grid;
     gap: 5px;
-
 }
 .submit:hover{
     background-color: green;
@@ -51,10 +57,7 @@ padding: 5px;
 
 }
 .myBooks{
-display: flex;
-flex-direction: column;
 background-color: blanchedalmond;
-
 }
 .searchBooks{
 padding: 5px;
@@ -63,4 +66,7 @@ background-color: burlywood;
 .disclaimer{
     color: rgb(124, 63, 63);
     text-decoration-style: wavy;
+}
+.hide{
+    display: none;
 }
