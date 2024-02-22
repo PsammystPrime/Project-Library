@@ -23,13 +23,17 @@ function addBookToLibrary(){
         e.preventDefault()
         bookList.textContent = '';
         //   create books
-         const book1 = new Book(title.value, author.value,pages.value, 'read')
+         const book1 = new Book(title.value, author.value,pages.value, status.value)
         //Push the books to array
          library.push(book1)
-         //display book
-         
-  return  library.forEach((book)=>{ bookList.textContent += book.info();})
+         //display book        
+        return  library.forEach((book)=>{
+            const list1 =document.createElement('li')
+            list1.textContent += book.info()
+            bookList.appendChild(list1)
+        }),
 
+        notification.textContent = 'Book added Successfully!'
     })
 
 }
