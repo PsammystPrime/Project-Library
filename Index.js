@@ -54,6 +54,7 @@ function addBookToLibrary(){
         notification.textContent = 'Book added Successfully!',
         del.addEventListener('click', ()=>{
             bookList.removeChild(bookItem),
+            library.pop(bookItem),
             notification.textContent = 'Book removed Successfully!'
           })
         });
