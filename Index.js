@@ -20,6 +20,17 @@ library.push(book2)
 library.push(book3)
 console.log(library);
 
+library.forEach((book)=>{ console.log(book.info());})
+  //console.log(library[0].info());
+//Pseudocode
+//1-Take user input of book
+//2- On submitting
+// -clear the form
+// -take FormData, make an Object, and push it to the library array
+// -use a loop to display every arrayitem on the screen
+
+
+
   /*1: Instead of hard coding book details, we use a form that fetches it.
   2: Instaed of calling the book, we add an event listener for submit button
   that calls book info().
