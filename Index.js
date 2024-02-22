@@ -32,25 +32,9 @@ function addBookToLibrary(){
 
     })
 
-//     //   create books
-
-//   const book2 = new Book('The 100', 'Kass Morgan','200', 'read')
-//   const book3 = new Book('The 200', 'Kent Morgan','300', 'unread')
-
-
-//     //library.push(book1)
-//     library.push(book2)
-//     library.push(book3)
-//     console.log(library);
-
-// display the books info
- // return  library.forEach((book)=>{ console.log(book.info());})
 }
 
 addBookToLibrary()
-
-
-
 
 
 //Pseudocode
