@@ -17,7 +17,7 @@ function addBookToLibrary(){
     const status = document.getElementById('status');
     const bookList = document.querySelector('.list');
     const submit = document.querySelector('.submit');
-    const notification = document.getElementById('notification')
+    const notification = document.getElementById('notification');
 
     submit.addEventListener('click', function(e){
         e.preventDefault()
@@ -34,28 +34,30 @@ function addBookToLibrary(){
          library.push(book1)
          //display book        
         return  library.forEach((book)=>{
-            const bookItem =document.createElement('li')
-            const bookInfo =document.createElement('p')
-            const bookPages =document.createElement('p')
-            const bookStatus =document.createElement('p')
-            const del = document.createElement('button')
+            const bookItem =document.createElement('li');
+            const bookInfo =document.createElement('p');
+            const bookPages =document.createElement('p');
+            const bookStatus =document.createElement('p');
+            const del = document.createElement('button');
+            bookInfo.textContent = 'About: ' + book.info();
+            bookPages.textContent = 'Pages: ' + pages.value;
+            bookStatus.textContent = 'Status: ' + status.value;
+            del.textContent = 'Delete';
 
-            bookInfo.textContent = 'About: ' + book.info()
-            bookPages.textContent = 'Pages: ' + pages.value
-            bookStatus.textContent = 'Status: ' + status.value
-            del.textContent = 'Delete'
+            bookItem.appendChild(bookInfo);
+            bookItem.appendChild(bookPages);
+            bookItem.appendChild(bookStatus);
+            bookItem.appendChild(del);
 
-            bookItem.appendChild(bookInfo)
-            bookItem.appendChild(bookPages)
-            bookItem.appendChild(bookStatus)
-            bookItem.appendChild(del)
-
-            bookList.appendChild(bookItem)
-        }),
-
-        notification.textContent = 'Book added Successfully!'
-
-    })
+           return bookList.appendChild(bookItem),
+        
+        notification.textContent = 'Book added Successfully!',
+        del.addEventListener('click', ()=>{
+            bookList.removeChild(bookItem),
+            notification.textContent = 'Book removed Successfully!'
+          })
+        });
+    });
 
 }
 
