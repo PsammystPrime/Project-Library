@@ -53,14 +53,12 @@ function addBookToLibrary(){
            bookList.appendChild(bookItem),
         
         notification.textContent = 'Book added Successfully!',
-        console.log(library),
         title.value = '',
         author.value = '',
         pages.value = '',
         del.addEventListener('click', ()=>{
             bookList.removeChild(bookItem),
             library.slice(0,0),
-            console.log(library),
             notification.textContent = 'Book removed Successfully!'
           })
         });
