@@ -6,7 +6,7 @@ function Book(title, author, pages, status) {
     this.pages = pages;
     this.status = status;
     this.info = function () {
-      return this.title + ' by ' + this.author + '.'
+      return this.title+' by '+this.author+' with '+this.pages+' pages '
     }
   };
 
@@ -21,40 +21,19 @@ function addBookToLibrary(){
 
     submit.addEventListener('click', function(e){
         e.preventDefault()
-        bookList.textContent = ''
-
-        if(status.checked == true){
-            status.value = 'read'
-        } else{
-            status.value = 'Unread'
-        }
+        bookList.textContent = '';
         //   create books
          const book1 = new Book(title.value, author.value,pages.value, status.value)
         //Push the books to array
          library.push(book1)
          //display book        
         return  library.forEach((book)=>{
-            const bookItem =document.createElement('li')
-            const bookInfo =document.createElement('p')
-            const bookPages =document.createElement('p')
-            const bookStatus =document.createElement('p')
-            const del = document.createElement('button')
-
-            bookInfo.textContent = 'About: ' + book.info()
-            bookPages.textContent = 'Pages: ' + pages.value
-            bookStatus.textContent = 'Status: ' + status.value
-            del.textContent = 'Delete'
-
-            bookItem.appendChild(bookInfo)
-            bookItem.appendChild(bookPages)
-            bookItem.appendChild(bookStatus)
-            bookItem.appendChild(del)
-
-            bookList.appendChild(bookItem)
+            const list1 =document.createElement('li')
+            list1.textContent += book.info()
+            bookList.appendChild(list1)
         }),
 
         notification.textContent = 'Book added Successfully!'
-
     })
 
 }
