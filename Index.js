@@ -11,19 +11,40 @@ function Book(title, author, pages, status) {
   };
 
 function addBookToLibrary(){
-//   create books
-  const book1 = new Book('The 100', 'Kass Morgan','100', 'read')
-  const book2 = new Book('The 100', 'Kass Morgan','200', 'read')
-  const book3 = new Book('The 200', 'Kent Morgan','300', 'unread')
+    const title = document.querySelector('#title');
+    const author = document.getElementById('author');
+    const pages = document.getElementById('pages');
+    const status = document.getElementById('status');
+    const bookList = document.querySelector('.list');
+    const submit = document.querySelector('.submit');
+    const notification = document.getElementById('notification')
 
-//Push the books to array
-    library.push(book1)
-    library.push(book2)
-    library.push(book3)
-    console.log(library);
+    submit.addEventListener('click', function(e){
+        e.preventDefault()
+        bookList.textContent = '';
+        //   create books
+         const book1 = new Book(title.value, author.value,pages.value, 'read')
+        //Push the books to array
+         library.push(book1)
+         //display book
+         
+  return  library.forEach((book)=>{ bookList.textContent += book.info();})
+
+    })
+
+//     //   create books
+
+//   const book2 = new Book('The 100', 'Kass Morgan','200', 'read')
+//   const book3 = new Book('The 200', 'Kent Morgan','300', 'unread')
+
+
+//     //library.push(book1)
+//     library.push(book2)
+//     library.push(book3)
+//     console.log(library);
 
 // display the books info
-  return  library.forEach((book)=>{ console.log(book.info());})
+ // return  library.forEach((book)=>{ console.log(book.info());})
 }
 
 addBookToLibrary()
