@@ -11,8 +11,6 @@ function Book(title, author, pages, status,) {
       return this.title +' by '+this.author+ ' has '+this.pages+ ' pages, '+this.status
     };
 
-
-
     function addBookToLibrary() {  
         const title = document.querySelector('#title');
         const author = document.getElementById('author');
